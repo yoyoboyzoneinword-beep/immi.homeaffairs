@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immigration and citizenship | Department of Home Affairs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #002147;
+    --dark-navy: #001530;
+    --mid-navy: #003366;
+    --blue: #1a6496;
+    --light-blue: #d9eaf7;
+    --teal: #1b7fc4;
+    --orange: #e87722;
+    --orange-hover: #c96318;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+    --text-dark: #212121;
+    --text-mid: #444;
+    --text-light: #666;
+    --border: #ddd;
+    --info-blue: #2b7bb9;
+    --info-bg: #e8f4fd;
+    --footer-dark: #1a1a1a;
+    --footer-mid: #2a2a2a;
+  }
+
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  a { text-decoration: none; color: inherit; }
+  a:hover { text-decoration: underline; }
+
+  /* ===== SKIP LINK ===== */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--orange);
+    color: white;
+    padding: 8px 16px;
+    z-index: 9999;
+    font-size: 14px;
+  }
+  .skip-link:focus { top: 0; }
+
+  /* ===== HEADER ===== */
+  .header-top {
+    background: var(--navy);
+    padding: 10px 0;
+  }
+  .header-top-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    padding: 6px 0;
+  }
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hamburger-icon span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+  }
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding-left: 20px;
+  }
+  .gov-crest {
+    width: 46px;
+    height: 46px;
+  }
+  .gov-crest svg {
+    width: 100%;
+    height: 100%;
+  }
+  .logo-text-area {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .logo-text-area .gov-title {
+    font-size: 11px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  .logo-text-area .dept-name {
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+  }
+  .header-page-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    padding-left: 20px;
+    margin-left: 10px;
+  }
+  .header-search-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+  }
+  .header-search-btn svg { width: 22px; height: 22px; }
+
+  /* ===== SECONDARY NAV ===== */
+  .secondary-nav {
+    background: var(--mid-navy);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .secondary-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .secondary-nav a {
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    padding: 8px 16px;
+    display: inline-block;
+    border-left: 1px solid rgba(255,255,255,0.15);
+  }
+  .secondary-nav a:first-child { border-left: none; }
+  .secondary-nav a:hover { background: rgba(255,255,255,0.1); text-decoration: none; color: white; }
+
+  /* ===== HERO SECTION ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--mid-navy) 50%, #1a6496 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  .hero-content {
+    flex: 0 0 45%;
+    padding: 50px 40px 50px 0;
+    z-index: 2;
+    position: relative;
+  }
+  .hero-welcome {
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+  .hero-title {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+  .hero-nav-list {
+    list-style: none;
+  }
+  .hero-nav-list li {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .hero-nav-list li:first-child {
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .hero-nav-list a {
+    color: white;
+    font-size: 16px;
+    padding: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-nav-list a:hover { text-decoration: none; background: rgba(255,255,255,0.05); padding-left: 8px; }
+  .hero-nav-list .arrow {
+    font-size: 18px;
+    opacity: 0.7;
+  }
+  .hero-image {
+    flex: 0 0 55%;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .hero-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2980b9 0%, #1a6496 40%, #0d4a73 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  /* Kangaroo silhouettes */
+  .kangaroo-scene {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+  }
+  .beach-bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      #87CEEB 0%,
+      #87CEEB 50%,
+      #1a7fc4 50%,
+      #1a7fc4 65%,
+      #c4a882 65%,
+      #c4a882 100%
+    );
+    position: relative;
+  }
+
+  /* ===== ASK A QUESTION BUTTON ===== */
+  .ask-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .ask-btn:hover { background: var(--orange-hover); }
+
+  /* ===== ALERT BANNER ===== */
+  .alert-banner {
+    background: var(--info-bg);
+    border-left: 4px solid var(--info-blue);
+    padding: 14px 20px;
+  }
+  .alert-banner-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .alert-icon {
+    color: var(--info-blue);
+    font-size: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .alert-text { font-size: 14px; }
+  .alert-text p { margin-bottom: 4px; }
+  .alert-text p:last-child { margin-bottom: 0; }
+  .alert-text a { color: var(--info-blue); text-decoration: underline; }
+  .alert-text a:hover { color: var(--blue); }
+  .ext-link::after { content: " ↗"; font-size: 12px; }
+
+  /* ===== CUSTOMISE SECTION ===== */
+  .customise-section {
+    background: var(--dark-navy);
+    padding: 16px 20px;
+  }
+  .customise-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .customise-label {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .customise-select {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 8px 40px 8px 12px;
+    font-size: 15px;
+    font-family: inherit;
+    border-radius: 3px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='white' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    min-width: 200px;
+  }
+  .customise-reset {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .customise-reset:hover { color: white; }
+
+  /* ===== CARDS SECTION ===== */
+  .cards-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .card {
+    background: white;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .card:hover { background: var(--off-white); }
+  .card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--blue);
+    line-height: 1.3;
+    flex: 1;
+    padding-right: 10px;
+  }
+  .card:hover .card-title { text-decoration: underline; }
+  .card-arrow {
+    color: var(--blue);
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .card-ext { color: var(--blue); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+  .card-desc {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+
+  /* ===== NEWS SECTION ===== */
+  .news-section {
+    background: white;
+    padding: 30px 0 50px;
+  }
+  .news-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .news-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .news-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .news-see-all {
+    color: var(--blue);
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  .news-controls {
+    margin-left: auto;
+    display: flex;
+    gap: 4px;
+  }
+  .news-arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+  }
+  .news-arrow-btn:hover { border-color: var(--blue); color: var(--blue); }
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .news-card {
+    border: 1px solid var(--border);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .news-card:hover .news-card-title { text-decoration: underline; color: var(--blue); }
+  .news-card-img {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+  }
+  .news-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* News card placeholder images */
+  .news-img-1 {
+    background: linear-gradient(135deg, #001a3d 0%, #003366 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .news-img-2 {
+    background: linear-gradient(135deg, #0d2137 0%, #1a4a6e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .news-img-3 {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .immi-app-logo {
+    text-align: center;
+    color: white;
+  }
+  .immi-app-logo .app-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+  }
+  .immi-app-logo .app-name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .systems-outage-text {
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .outage-stripes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: repeating-linear-gradient(
+      45deg,
+      #f0c000,
+      #f0c000 10px,
+      #000 10px,
+      #000 20px
+    );
+  }
+  .outage-stripes-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: repeating-linear-gradient(
+      45deg,
+      #f0c000,
+      #f0c000 10px,
+      #000 10px,
+      #000 20px
+    );
+  }
+  .globe-visual {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #4a9fd4, #0d3a6e);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(74,159,212,0.5);
+  }
+  .news-card-body {
+    padding: 16px;
+  }
+  .news-card-date {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+  }
+  .news-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .news-card-excerpt {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+
+  /* ===== CONTACT / FOOTER TOP ===== */
+  .contact-section {
+    background: var(--navy);
+    padding: 50px 0;
+  }
+  .contact-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1.5fr 1.8fr;
+    gap: 40px;
+  }
+  .contact-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+  }
+  .contact-col-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  .contact-col p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .contact-col a {
+    color: rgba(255,255,255,0.85);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: underline;
+  }
+  .contact-col a:hover { color: white; }
+
+  /* Border Watch Box */
+  .border-watch-box {
+    background: #1a3a6e;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 16px;
+  }
+  .border-watch-box:hover { background: #1e4a8a; }
+  .border-watch-text {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .border-watch-btn {
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+
+  /* National Security Box */
+  .national-security-box {
+    background: #003087;
+    border: 2px solid rgba(255,255,255,0.2);
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .national-security-box:hover { background: #004099; }
+  .ns-tag { color: rgba(255,255,255,0.6); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .ns-main-text {
+    color: white;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .ns-main-text .speak-up {
+    font-size: 22px;
+    font-weight: 900;
+    display: block;
+    letter-spacing: 1px;
+  }
+  .ns-visit { color: rgba(255,255,255,0.6); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin: 8px 0 4px; }
+  .ns-url { color: white; font-size: 11px; font-weight: 600; }
+
+  /* ===== FOOTER NAV ===== */
+  .footer-nav {
+    background: var(--footer-dark);
+    padding: 40px 0;
+  }
+  .footer-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 40px;
+    align-items: start;
+  }
+  .footer-nav-col1 {}
+  .footer-portfolio-link {
+    display: block;
+    color: rgba(255,255,255,0.5);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .footer-portfolio-link:hover { color: white; text-decoration: none; }
+  .footer-portfolio-link.active { color: white; }
+  .footer-nav-col2 {}
+  .footer-link {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    padding: 6px 0;
+  }
+  .footer-link:hover { color: white; }
+  .footer-gov-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .footer-crest {
+    width: 80px;
+    height: 80px;
+    opacity: 0.85;
+  }
+  .footer-gov-name {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  /* ===== ACKNOWLEDGEMENT ===== */
+  .acknowledgement {
+    background: var(--footer-dark);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 20px 0;
+  }
+  .ack-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .ack-text {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    max-width: 700px;
+  }
+  .back-to-top {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .back-to-top:hover { color: white; }
+
+  /* ===== BOTTOM FOOTER ===== */
+  .bottom-footer {
+    background: var(--footer-mid);
+    padding: 16px 0;
+  }
+  .bottom-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .bottom-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 0;
+  }
+  .bottom-link {
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+    padding: 2px 12px 2px 0;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    margin-right: 12px;
+  }
+  .bottom-link:last-child { border-right: none; }
+  .bottom-link:hover { color: white; }
+  .social-links {
+    display: flex;
+    gap: 10px;
+  }
+  .social-link {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .social-link:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
+
+  /* ===== MOBILE NAV OVERLAY ===== */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+  }
+  .nav-overlay.open { display: block; }
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100vh;
+    background: var(--dark-navy);
+    z-index: 999;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding-bottom: 40px;
+  }
+  .mobile-nav.open { left: 0; }
+  .mobile-nav-header {
+    background: var(--navy);
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-nav-header h3 { color: white; font-size: 16px; }
+  .close-nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .mobile-nav-links { padding: 10px 0; }
+  .mobile-nav-link {
+    display: block;
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-nav-link:hover { background: rgba(255,255,255,0.05); text-decoration: none; color: white; }
+  .mobile-nav-section-title {
+    color: rgba(255,255,255,0.4);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 20px 8px;
+  }
+
+  /* ===== SEARCH OVERLAY ===== */
+  .search-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,42,0.95);
+    z-index: 998;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-overlay.open { display: flex; }
+  .search-box {
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 16px 50px 16px 20px;
+    font-size: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  .search-box input::placeholder { color: rgba(255,255,255,0.4); }
+  .search-box input:focus { outline: none; border-color: var(--teal); }
+  .search-submit {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .search-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-grid { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr 1fr; }
+    .footer-nav-inner { grid-template-columns: 1fr 1fr; }
+    .hero { flex-direction: column; }
+    .hero-image { display: none; }
+    .hero-content { flex: 1; padding: 30px 0; }
+  }
+  @media (max-width: 600px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .footer-nav-inner { grid-template-columns: 1fr; }
+    .hero-title { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Mobile Nav Overlay -->
+<div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <h3>Menu</h3>
+    <button class="close-nav-btn" onclick="closeNav()">✕</button>
+  </div>
+  <div class="mobile-nav-links">
+    <div class="mobile-nav-section-title">Immigration and citizenship</div>
+    <a href="#entering" class="mobile-nav-link">Entering and leaving Australia ›</a>
+    <a href="#visas" class="mobile-nav-link">Visas ›</a>
+    <a href="#citizenship" class="mobile-nav-link">Australian citizenship ›</a>
+    <a href="#what-we-do" class="mobile-nav-link">What we do ›</a>
+    <a href="#settling" class="mobile-nav-link">Settling in Australia ›</a>
+    <a href="#help" class="mobile-nav-link">Help and support ›</a>
+    <div class="mobile-nav-section-title">Home Affairs Portfolio</div>
+    <a href="https://www.homeaffairs.gov.au/" target="_blank" class="mobile-nav-link">Home Affairs Portfolio ↗</a>
+    <a href="https://www.abf.gov.au/" target="_blank" class="mobile-nav-link">Travel and Crossing the Border ↗</a>
+    <a href="https://www.abf.gov.au/importing-exporting-and-manufacturing" target="_blank" class="mobile-nav-link">Import, Export and Buying Online ↗</a>
+    <a href="https://www.nationalsecurity.gov.au/" target="_blank" class="mobile-nav-link">National Security ↗</a>
+    <a href="https://www.emergency.gov.au/" target="_blank" class="mobile-nav-link">Emergency Management ↗</a>
+    <a href="https://www.cyber.gov.au/" target="_blank" class="mobile-nav-link">Cyber Security ↗</a>
+    <a href="https://www.homeaffairs.gov.au/about-us/our-portfolios/multicultural-affairs" target="_blank" class="mobile-nav-link">Multicultural Affairs ↗</a>
+  </div>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" onclick="closeSearch()">✕</button>
+  <div class="search-box">
+    <input type="text" placeholder="Search immigration and citizenship..." id="searchInput" onkeydown="handleSearch(event)">
+    <button class="search-submit" onclick="doSearch()">🔍</button>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-top">
+    <div class="header-top-inner">
+      <div class="header-left">
+        <button class="hamburger-btn" onclick="openNav()" aria-label="Open menu">
+          <div class="hamburger-icon">
+            <span></span><span></span><span></span>
+          </div>
+          Menu
+        </button>
+        <a href="https://immi.homeaffairs.gov.au/" class="logo-area" style="text-decoration:none;">
+          <!-- Australian Government Crest SVG -->
+          <svg class="gov-crest" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <!-- Simplified crest representation -->
+            <g fill="rgba(255,255,255,0.9)">
+              <!-- Shield outline -->
+              <path d="M50,15 L70,25 L70,55 Q70,75 50,85 Q30,75 30,55 L30,25 Z" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
+              <!-- Star above -->
+              <polygon points="50,10 52,16 58,16 53,20 55,26 50,22 45,26 47,20 42,16 48,16" fill="rgba(255,255,255,0.9)"/>
+              <!-- Southern Cross -->
+              <circle cx="62" cy="35" r="1.5" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="67" cy="42" r="1.2" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="60" cy="47" r="1.5" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="55" cy="40" r="1.2" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="63" cy="50" r="1" fill="rgba(255,255,255,0.9)"/>
+              <!-- Kangaroo & emu silhouettes flanking shield -->
+              <!-- Left emu simplified -->
+              <ellipse cx="35" cy="72" rx="4" ry="6" fill="rgba(255,255,255,0.7)"/>
+              <line x1="35" y1="66" x2="34" y2="60" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+              <!-- Right kangaroo simplified -->
+              <ellipse cx="65" cy="72" rx="4" ry="5" fill="rgba(255,255,255,0.7)"/>
+              <path d="M65,67 Q68,62 66,58" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" fill="none"/>
+              <!-- Wreath base -->
+              <path d="M28,80 Q50,90 72,80" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" fill="none"/>
+            </g>
+          </svg>
+          <div class="logo-text-area">
+            <span class="gov-title">Australian Government</span>
+            <span class="dept-name">Department of Home Affairs</span>
+          </div>
+        </a>
+      </div>
+      <span class="header-page-title">Immigration and citizenship</span>
+      <button class="header-search-btn" onclick="openSearch()" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Secondary Nav -->
+  <div class="secondary-nav">
+    <div class="secondary-nav-inner">
+      <a href="https://online.immi.homeaffairs.gov.au/lusc/login" target="_blank">ImmiAccount</a>
+      <a href="https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online" target="_blank">Visa Entitlement Verification Online (VEVO)</a>
+      <a href="https://www.abf.gov.au/entering-and-leaving-australia/tourist-refund-scheme" target="_blank">My Tourist Refund Scheme (TRS)</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<main id="main-content">
+  <section class="hero" aria-label="Immigration and citizenship navigation">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-welcome">Welcome to the Department of Home Affairs</p>
+        <h1 class="hero-title">Immigration and citizenship</h1>
+        <nav aria-label="Main navigation">
+          <ul class="hero-nav-list">
+            <li id="entering"><a href="https://immi.homeaffairs.gov.au/entering-and-leaving-australia">Entering and leaving Australia <span class="arrow">›</span></a></li>
+            <li id="visas"><a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing">Visas <span class="arrow">›</span></a></li>
+            <li id="citizenship"><a href="https://immi.homeaffairs.gov.au/citizenship">Australian citizenship <span class="arrow">›</span></a></li>
+            <li id="what-we-do"><a href="https://immi.homeaffairs.gov.au/what-we-do">What we do <span class="arrow">›</span></a></li>
+            <li id="settling"><a href="https://immi.homeaffairs.gov.au/settling-in-australia">Settling in Australia <span class="arrow">›</span></a></li>
+            <li id="help"><a href="https://immi.homeaffairs.gov.au/help-support">Help and support <span class="arrow">›</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Hero image with kangaroos -->
+      <div class="hero-image" aria-hidden="true">
+        <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+          <!-- Sky -->
+          <rect width="600" height="380" fill="#87CEEB"/>
+          <!-- Gradient sky -->
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#5BA3D9"/>
+              <stop offset="60%" stop-color="#87CEEB"/>
+              <stop offset="100%" stop-color="#B8DDF7"/>
+            </linearGradient>
+            <linearGradient id="oceanGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1565C0"/>
+              <stop offset="100%" stop-color="#0D47A1"/>
+            </linearGradient>
+            <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#DEB887"/>
+              <stop offset="100%" stop-color="#C4A876"/>
+            </linearGradient>
+          </defs>
+          <rect width="600" height="380" fill="url(#skyGrad)"/>
+          <!-- Rocky cliff right -->
+          <path d="M480,0 L600,0 L600,250 L520,260 L480,220 Z" fill="#8B7355"/>
+          <path d="M480,0 L600,0 L600,220 L540,200 L480,160 Z" fill="#9B8365"/>
+          <!-- Ocean -->
+          <path d="M0,220 Q150,200 300,215 Q450,230 600,215 L600,380 L0,380 Z" fill="url(#oceanGrad)"/>
+          <!-- Ocean waves -->
+          <path d="M0,230 Q75,225 150,230 Q225,235 300,230 Q375,225 450,230 Q525,235 600,230" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+          <path d="M0,245 Q75,240 150,245 Q225,250 300,245 Q375,240 450,245 Q525,250 600,245" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+          <!-- Beach/Sand -->
+          <path d="M0,280 Q150,265 300,272 Q450,280 600,268 L600,380 L0,380 Z" fill="url(#sandGrad)"/>
+          <!-- Wet sand reflection -->
+          <path d="M0,282 Q150,267 300,274 Q450,282 600,270 L600,295 Q450,290 300,286 Q150,280 0,294 Z" fill="rgba(180,160,120,0.5)"/>
+
+          <!-- KANGAROO 1 (left, standing) -->
+          <g transform="translate(140, 195)" fill="#8B6914">
+            <!-- Body -->
+            <ellipse cx="0" cy="0" rx="18" ry="28" transform="rotate(-20)"/>
+            <!-- Head -->
+            <ellipse cx="-8" cy="-35" rx="10" ry="12" transform="rotate(-10)"/>
+            <!-- Ear left -->
+            <ellipse cx="-14" cy="-44" rx="3" ry="7" transform="rotate(-5)" fill="#7A5A10"/>
+            <!-- Ear right -->
+            <ellipse cx="-4" cy="-45" rx="3" ry="7" transform="rotate(5)" fill="#7A5A10"/>
+            <!-- Eye -->
+            <circle cx="-11" cy="-36" r="2.5" fill="#2c1a00"/>
+            <circle cx="-10.5" cy="-36.5" r="1" fill="white"/>
+            <!-- Nose -->
+            <ellipse cx="-16" cy="-30" rx="3" ry="2" fill="#5a3a00"/>
+            <!-- Front arm -->
+            <path d="M-5,-10 Q-18,-5 -22,5" stroke="#8B6914" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <!-- Pouch -->
+            <ellipse cx="5" cy="5" rx="8" ry="10" fill="#7A5A10"/>
+            <!-- Joey peaking out -->
+            <circle cx="5" cy="-2" r="5" fill="#9B7624"/>
+            <circle cx="3" cy="-4" r="1.5" fill="#2c1a00"/>
+            <!-- Tail -->
+            <path d="M15,25 Q40,45 38,65" stroke="#8B6914" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <!-- Back legs -->
+            <path d="M8,20 L12,50 L5,60" stroke="#8B6914" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M0,22 L4,50 L-3,60" stroke="#8B6914" stroke-width="5" fill="none" stroke-linecap="round"/>
+          </g>
+
+          <!-- KANGAROO 2 (right, grazing/bent forward) -->
+          <g transform="translate(280, 215)" fill="#A07820">
+            <!-- Body bent forward -->
+            <ellipse cx="0" cy="0" rx="20" ry="22" transform="rotate(40)"/>
+            <!-- Head down grazing -->
+            <ellipse cx="20" cy="10" rx="11" ry="9" transform="rotate(60)"/>
+            <!-- Ear -->
+            <ellipse cx="26" cy="0" rx="3" ry="6" transform="rotate(55)" fill="#8B6614"/>
+            <ellipse cx="30" cy="5" rx="3" ry="6" transform="rotate(65)" fill="#8B6614"/>
+            <!-- Eye -->
+            <circle cx="24" cy="8" r="2.5" fill="#2c1a00"/>
+            <!-- Tail up -->
+            <path d="M-15,10 Q-35,0 -40,-15" stroke="#A07820" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <!-- Front legs (supporting weight, bent) -->
+            <path d="M10,-8 L15,18 L8,28" stroke="#A07820" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M0,5 L5,28 L-2,38" stroke="#A07820" stroke-width="5" fill="none" stroke-linecap="round"/>
+          </g>
+
+          <!-- White water/foam at shore -->
+          <path d="M0,285 Q100,278 200,283 Q300,288 400,282 Q500,278 600,283" fill="rgba(255,255,255,0.6)" stroke="none"/>
+
+          <!-- Rock in ocean -->
+          <ellipse cx="500" cy="240" rx="22" ry="12" fill="#6B5A4A"/>
+          <ellipse cx="500" cy="236" rx="20" ry="10" fill="#7A6A5A"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask a Question floating button -->
+  <button class="ask-btn" onclick="window.open('https://immi.homeaffairs.gov.au/help-support/contact-us','_blank')">Ask a question</button>
+
+  <!-- ===== ALERT BANNER ===== -->
+  <div class="alert-banner" role="alert">
+    <div class="alert-banner-inner">
+      <span class="alert-icon">ℹ</span>
+      <div class="alert-text">
+        <p>People impacted by the conflict in Iran can find more information on <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/iran-visa-information" target="_blank" class="ext-link">Iran Visa Information</a></p>
+        <p>People impacted by conflict in the State of Palestine or Israel can find more information on <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/hamas-israel-conflict-visa-support" target="_blank" class="ext-link">Hamas-Israel Conflict: Visa Support and financial assistance</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOMISE SECTION ===== -->
+  <div class="customise-section" aria-label="Customise this page">
+    <div class="customise-inner">
+      <span class="customise-label">Customise this page</span>
+      <select class="customise-select" aria-label="Show me more options">
+        <option value="">Show me more...</option>
+        <option value="student">Student visa information</option>
+        <option value="work">Work visa information</option>
+        <option value="family">Family visa information</option>
+        <option value="citizenship">Citizenship information</option>
+        <option value="tourist">Tourist information</option>
+        <option value="employer">Employer information</option>
+      </select>
+      <button class="customise-reset" onclick="resetCustomise()">Reset</button>
+    </div>
+  </div>
+
+  <!-- ===== CARDS SECTION ===== -->
+  <section class="cards-section" aria-label="Quick links">
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-sponsored" class="card" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Employ people from overseas</span>
+          <span class="card-arrow">›</span>
+        </div>
+        <p class="card-desc">See how to bring someone into Australia to work for you.</p>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/hamas-israel-conflict-visa-support" class="card" target="_blank" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Hamas-Israel conflict support</span>
+          <span class="card-ext">↗</span>
+        </div>
+        <p class="card-desc">Find visa information to support those impacted by the Hamas-Israel conflict and surrounding areas.</p>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-finder" class="card" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Explore visa options</span>
+          <span class="card-arrow">›</span>
+        </div>
+        <p class="card-desc">Answer a few questions to identify which visas might be suitable for you and your family.</p>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="https://online.immi.homeaffairs.gov.au/lusc/login" class="card" target="_blank" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Our online forms and services</span>
+          <span class="card-arrow">›</span>
+        </div>
+        <p class="card-desc">Apply, notify us of changes, check status or withdraw an application. Use ImmiAccount or VEVO.</p>
+      </a>
+
+      <!-- Card 5 -->
+      <a href="https://immi.homeaffairs.gov.au/citizenship/become-a-citizen" class="card" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Become an Australian citizen</span>
+          <span class="card-arrow">›</span>
+        </div>
+        <p class="card-desc">See if you are eligible and how to apply.</p>
+      </a>
+
+      <!-- Card 6 -->
+      <a href="https://immi.homeaffairs.gov.au/visas/already-have-a-visa/visa-expiry" class="card" style="text-decoration:none; position:relative;">
+        <div class="card-title-row">
+          <span class="card-title">Visa expiring or has expired</span>
+          <span class="card-arrow">›</span>
+        </div>
+        <p class="card-desc">See what your options are and what you need to do.</p>
+      </a>
+
+      <!-- Card 7 -->
+      <a href="https://immi.homeaffairs.gov.au/help-support/situation-has-changed" class="card" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Your situation has changed</span>
+          <span class="card-arrow">›</span>
+        </div>
+        <p class="card-desc">Moved? Had a baby? Got a new passport? Need to change your plans? Find out what you need to do.</p>
+      </a>
+
+      <!-- Card 8 -->
+      <a href="https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions" class="card" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Visa conditions</span>
+          <span class="card-arrow">›</span>
+        </div>
+        <p class="card-desc">Your visa has conditions. Find out what you can and can't do.</p>
+      </a>
+
+      <!-- Card 9 -->
+      <a href="https://www.borderwatch.abf.gov.au/" target="_blank" class="card" style="text-decoration:none;">
+        <div class="card-title-row">
+          <span class="card-title">Report suspicious activities</span>
+          <span class="card-ext">↗</span>
+        </div>
+        <p class="card-desc">Report suspicious or illegal immigration, citizenship, customs and trade activity.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== NEWS SECTION ===== -->
+  <section class="news-section" aria-label="News">
+    <div class="news-inner">
+      <div class="news-header">
+        <h2 class="news-title">News</h2>
+        <a href="https://immi.homeaffairs.gov.au/news-media/news" class="news-see-all">See all</a>
+        <div class="news-controls">
+          <button class="news-arrow-btn" onclick="scrollNews(-1)" aria-label="Previous news">‹</button>
+          <button class="news-arrow-btn" onclick="scrollNews(1)" aria-label="Next news">›</button>
+        </div>
+      </div>
+      <div class="news-grid" id="newsGrid">
+        <!-- News 1: Australian Immi App -->
+        <a href="https://immi.homeaffairs.gov.au/news-media/news/australian-immi-app-now-available-47-countries" style="text-decoration:none;" class="news-card">
+          <div class="news-card-img news-img-1">
+            <div class="immi-app-logo">
+              <svg class="app-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Australia outline with arrows -->
+                <path d="M30,25 L45,20 L60,22 L75,30 L80,45 L78,60 L70,72 L60,78 L50,80 L40,75 L32,68 L25,55 L22,42 Z" fill="none" stroke="url(#appGrad)" stroke-width="3"/>
+                <defs>
+                  <linearGradient id="appGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#e74c3c"/>
+                    <stop offset="100%" stop-color="#ff6b9d"/>
+                  </linearGradient>
+                </defs>
+                <!-- Arrows -->
+                <path d="M20,30 L35,15 M35,15 L35,25 M35,15 L25,15" stroke="#e74c3c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M80,70 L65,85 M65,85 L65,75 M65,85 L75,85" stroke="#e74c3c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              </svg>
+              <div class="app-name" style="font-size:14px; font-weight:900; letter-spacing:2px; color:white; margin-top:8px;">Australian Immi App</div>
+            </div>
+          </div>
+          <div class="news-card-body">
+            <p class="news-card-date">01 Apr 2026</p>
+            <h3 class="news-card-title">Australian Immi App now available in 47 countries</h3>
+            <p class="news-card-excerpt">Travelling to Australia is simpler with the continued expansion of the Australian Immi App.</p>
+          </div>
+        </a>
+
+        <!-- News 2: Iran Travel restrictions -->
+        <a href="https://immi.homeaffairs.gov.au/news-media/news/travel-to-australia-temporarily-restricted-iranian-visitor-visa-holders" style="text-decoration:none;" class="news-card">
+          <div class="news-card-img news-img-2" style="position:relative; overflow:hidden;">
+            <div class="globe-visual"></div>
+            <div style="position:absolute; bottom:10px; right:10px; width:40px; height:40px; border-radius:50%; background:radial-gradient(circle at 35% 35%, #ff6b35, #c0392b); opacity:0.8;"></div>
+          </div>
+          <div class="news-card-body">
+            <p class="news-card-date">25 Mar 2026</p>
+            <h3 class="news-card-title">Travel to Australia temporarily restricted for Iranian Visitor visa holders</h3>
+            <p class="news-card-excerpt">Temporary travel restrictions are now in place for most people outside Australia who have a Subclass 600 Visitor visa linked to their Iranian passport.</p>
+          </div>
+        </a>
+
+        <!-- News 3: Systems Outage -->
+        <a href="https://immi.homeaffairs.gov.au/news-media/news/systems-maintenance-27-march-29-march-2026" style="text-decoration:none;" class="news-card">
+          <div class="news-card-img news-img-3" style="position:relative;">
+            <div class="outage-stripes-top"></div>
+            <div class="systems-outage-text">SYSTEMS<br>OUTAGE</div>
+            <div class="outage-stripes"></div>
+          </div>
+          <div class="news-card-body">
+            <p class="news-card-date">16 Mar 2026</p>
+            <h3 class="news-card-title">Systems maintenance 27 March – 29 March 2026</h3>
+            <p class="news-card-excerpt">We will be doing systems maintenance from 5 pm (AEDT) Friday 27 March 2026 to 5 pm (AEDT) Sunday 29 March 2026.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section" aria-label="Contact">
+    <div class="contact-inner">
+      <!-- Col 1: Contact heading -->
+      <div>
+        <h2 class="contact-heading">Contact</h2>
+      </div>
+
+      <!-- Col 2: General -->
+      <div class="contact-col">
+        <h3 class="contact-col-title">General</h3>
+        <p>Do you have a question, feedback or a complaint? Let us help you find the right answer.</p>
+        <a href="https://immi.homeaffairs.gov.au/help-support/contact-us/popular-questions">Popular questions</a>
+        <a href="https://immi.homeaffairs.gov.au/help-support/contact-us">Contact us</a>
+      </div>
+
+      <!-- Col 3: Report suspicious activities -->
+      <div class="contact-col">
+        <h3 class="contact-col-title">Report suspicious activities</h3>
+        <a href="https://www.borderwatch.abf.gov.au/" target="_blank" class="border-watch-box" style="text-decoration:none; display:block;">
+          <p class="border-watch-text">Seen suspicious customs, border protection, visa or immigration activity?</p>
+          <button class="border-watch-btn">Report online to BORDER WATCH</button>
+        </a>
+      </div>
+
+      <!-- Col 4: National Security Hotline -->
+      <div class="contact-col">
+        <h3 class="contact-col-title">National Security Hotline</h3>
+        <a href="https://www.nationalsecurity.gov.au/" target="_blank" class="national-security-box" style="text-decoration:none; display:block;">
+          <p class="ns-tag">If it doesn't add up</p>
+          <p class="ns-main-text"><span class="speak-up">SPEAK UP</span></p>
+          <p class="ns-visit">— VISIT THE —</p>
+          <p class="ns-tag">NATIONAL SECURITY WEBSITE</p>
+          <p class="ns-url">NATIONALSECURITY.GOV.AU</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER NAVIGATION ===== -->
+<footer>
+  <div class="footer-nav">
+    <div class="footer-nav-inner">
+      <!-- Col 1: Portfolio links -->
+      <div class="footer-nav-col1">
+        <a href="https://www.homeaffairs.gov.au/" target="_blank" class="footer-portfolio-link active">HOME AFFAIRS PORTFOLIO</a>
+        <a href="https://www.abf.gov.au/" target="_blank" class="footer-portfolio-link">TRAVEL AND CROSSING THE BORDER</a>
+        <a href="https://www.abf.gov.au/importing-exporting-and-manufacturing" target="_blank" class="footer-portfolio-link">IMPORT, EXPORT AND BUYING ONLINE</a>
+        <a href="https://www.nationalsecurity.gov.au/" target="_blank" class="footer-portfolio-link">NATIONAL SECURITY</a>
+        <a href="https://www.emergency.gov.au/" target="_blank" class="footer-portfolio-link">EMERGENCY MANAGEMENT</a>
+        <a href="https://www.cyber.gov.au/" target="_blank" class="footer-portfolio-link">CYBER SECURITY</a>
+        <a href="https://www.homeaffairs.gov.au/about-us/our-portfolios/multicultural-affairs" target="_blank" class="footer-portfolio-link">MULTICULTURAL AFFAIRS</a>
+      </div>
+
+      <!-- Col 2: About links -->
+      <div class="footer-nav-col2">
+        <a href="https://www.homeaffairs.gov.au/about-us/who-we-are" target="_blank" class="footer-link">Who we are ↗</a>
+        <a href="https://www.homeaffairs.gov.au/about-us/our-ministers" target="_blank" class="footer-link">Our Ministers ↗</a>
+        <a href="https://immi.homeaffairs.gov.au/help-support/contact-us/popular-questions" class="footer-link">Popular questions</a>
+        <a href="https://immi.homeaffairs.gov.au/help-support/glossary" class="footer-link">Glossary</a>
+        <a href="https://immi.homeaffairs.gov.au/forms/all-forms" class="footer-link">Forms</a>
+        <a href="https://online.immi.homeaffairs.gov.au/lusc/login" target="_blank" class="footer-link">Online services</a>
+        <a href="https://immi.homeaffairs.gov.au/help-support/contact-us/complaints-and-feedback" class="footer-link">Compliments, complaints and suggestions ↗</a>
+      </div>
+
+      <!-- Col 3: empty spacer -->
+      <div></div>
+
+      <!-- Col 4: Gov Logo -->
+      <div class="footer-gov-logo">
+        <svg class="footer-crest" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+          <g fill="rgba(255,255,255,0.85)">
+            <!-- Crest circle -->
+            <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+            <!-- Shield -->
+            <path d="M50,18 L68,28 L68,54 Q68,72 50,82 Q32,72 32,54 L32,28 Z" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
+            <!-- Federation star (7 points) -->
+            <polygon points="50,8 52.5,15 59,15 54,19 56,26 50,22 44,26 46,19 41,15 47.5,15" fill="rgba(255,255,255,0.9)"/>
+            <!-- Southern cross stars -->
+            <polygon points="63,32 64.2,35.5 67.5,35.5 64.8,37.5 65.8,41 63,39 60.2,41 61.2,37.5 58.5,35.5 61.8,35.5" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="68" cy="44" r="1.5" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="61" cy="50" r="1.8" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="57" cy="43" r="1.3" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="64" cy="53" r="1.2" fill="rgba(255,255,255,0.9)"/>
+            <!-- Emu (left) -->
+            <ellipse cx="37" cy="72" rx="4" ry="6" fill="rgba(255,255,255,0.8)"/>
+            <path d="M37,66 Q35,60 36,55" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none"/>
+            <circle cx="35" cy="54" r="2.5" fill="rgba(255,255,255,0.8)"/>
+            <!-- Kangaroo (right) -->
+            <ellipse cx="64" cy="71" rx="5" ry="7" transform="rotate(-10,64,71)" fill="rgba(255,255,255,0.8)"/>
+            <path d="M65,65 Q68,59 66,54" stroke="rgba(255,255,255,0.8)" stroke-width="2" fill="none"/>
+            <circle cx="64" cy="53" r="3" fill="rgba(255,255,255,0.8)"/>
+            <!-- Ground/wreath base -->
+            <path d="M28,88 Q50,96 72,88" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" fill="none"/>
+          </g>
+        </svg>
+        <div class="footer-gov-name">Australian Government</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acknowledgement of Country -->
+  <div class="acknowledgement">
+    <div class="ack-inner">
+      <p class="ack-text">The Department of Home Affairs acknowledges the Traditional Custodians of Country throughout Australia and their continuing connection to land, sea and community. We pay our respects to all Aboriginal and Torres Strait Islander peoples, their cultures and to their elders past, present and emerging.</p>
+      <button class="back-to-top" onclick="scrollToTop()">Back to top ▲</button>
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="bottom-footer">
+    <div class="bottom-footer-inner">
+      <div class="bottom-links">
+        <a href="https://immi.homeaffairs.gov.au/conditions-of-use" class="bottom-link">Conditions of use</a>
+        <a href="https://immi.homeaffairs.gov.au/web-privacy-statement" class="bottom-link">Web privacy statement</a>
+        <a href="https://immi.homeaffairs.gov.au/accessibility-of-this-website" class="bottom-link">Accessibility of this website</a>
+        <a href="https://immi.homeaffairs.gov.au/access-to-information" class="bottom-link">Access to information</a>
+        <a href="https://immi.homeaffairs.gov.au/information-publication-scheme" class="bottom-link">Information publication scheme</a>
+        <br>
+        <a href="https://immi.homeaffairs.gov.au/copyright-and-disclaimer" class="bottom-link">Copyright and disclaimer</a>
+        <a href="https://immi.homeaffairs.gov.au/privacy" class="bottom-link">Privacy</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/homeaffairsau/" target="_blank" class="social-link" aria-label="Facebook" title="Facebook">f</a>
+        <a href="https://www.linkedin.com/company/department-of-home-affairs/" target="_blank" class="social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Nav
+  function openNav() {
+    document.getElementById('mobileNav').classList.add('open');
+    document.getElementById('navOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+    document.getElementById('navOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Search
+  function openSearch() {
+    document.getElementById('searchOverlay').classList.add('open');
+    setTimeout(() => document.getElementById('searchInput').focus(), 100);
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSearch() {
+    document.getElementById('searchOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function doSearch() {
+    const q = document.getElementById('searchInput').value;
+    if (q.trim()) {
+      window.open('https://immi.homeaffairs.gov.au/search?q=' + encodeURIComponent(q), '_blank');
+    }
+  }
+  function handleSearch(e) {
+    if (e.key === 'Enter') doSearch();
+    if (e.key === 'Escape') closeSearch();
+  }
+
+  // Scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Reset customise
+  function resetCustomise() {
+    document.querySelector('.customise-select').value = '';
+  }
+
+  // News carousel (simple scroll)
+  let newsOffset = 0;
+  function scrollNews(dir) {
+    const grid = document.getElementById('newsGrid');
+    newsOffset += dir * 300;
+    // Clamp
+    newsOffset = Math.max(0, newsOffset);
+    grid.scrollLeft = newsOffset;
+  }
+
+  // Close search on background click
+  document.getElementById('searchOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeSearch();
+  });
+
+  // Keyboard accessibility for nav overlay
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeNav();
+      closeSearch();
+    }
+  });
+</script>
+</body>
+</html>
