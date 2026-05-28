@@ -931,6 +931,326 @@
     .footer-nav-inner { grid-template-columns: 1fr; }
     .hero-title { font-size: 26px; }
   }
+
+
+/* VEVO PAGE STYLES */
+
+/* ===== VEVO PAGE SPECIFIC STYLES ===== */
+
+/* Breadcrumb */
+.breadcrumb {
+  background: var(--navy);
+  padding: 10px 0;
+}
+.breadcrumb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.breadcrumb a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+}
+.breadcrumb a:hover { color: white; text-decoration: underline; }
+.breadcrumb .sep {
+  color: rgba(255,255,255,0.4);
+  font-size: 11px;
+}
+.breadcrumb .current {
+  color: rgba(255,255,255,0.5);
+}
+
+/* Hero Banner */
+.vevo-hero {
+  position: relative;
+  height: 280px;
+  background: var(--navy);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.vevo-hero-bg {
+  position: absolute;
+  top: 0; right: 0;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+.vevo-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.vevo-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to right, var(--navy) 40%, transparent 70%);
+}
+.vevo-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  width: 100%;
+}
+.vevo-hero-content h1 {
+  color: white;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 420px;
+}
+
+/* Passport hero image placeholder */
+.passport-visual {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tab Nav */
+.tab-nav {
+  background: var(--navy);
+  border-bottom: none;
+}
+.tab-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+}
+.tab-btn {
+  padding: 14px 22px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: white; }
+.tab-btn.active {
+  background: white;
+  color: var(--text-dark);
+  font-weight: 600;
+  border-bottom: 3px solid white;
+}
+
+/* Alert / Info Banner */
+.vevo-alert {
+  background: #e8f4fd;
+  border-left: 4px solid #2b7bb9;
+  padding: 14px 20px;
+  margin: 24px 0;
+}
+.vevo-alert-inner {
+  max-width: 1100px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.vevo-alert-icon {
+  color: #2b7bb9;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.vevo-alert-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.vevo-alert-text strong { font-weight: 700; }
+.vevo-alert-text a { color: #2b7bb9; text-decoration: underline; }
+
+/* Main Content Area */
+.vevo-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Two column layout */
+.vevo-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 30px 0 40px;
+  align-items: start;
+}
+.vevo-text-col p {
+  font-size: 15px;
+  color: var(--text-dark);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.vevo-text-col ul {
+  margin: 10px 0 16px 20px;
+}
+.vevo-text-col ul li {
+  font-size: 15px;
+  color: var(--text-dark);
+  line-height: 1.7;
+  list-style: disc;
+}
+.vevo-img-col {
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.vevo-img-col img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+/* Laptop/desk placeholder */
+.desk-visual {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #f0ede8 0%, #e8e4df 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Divider */
+.vevo-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 10px 0 30px;
+}
+
+/* Three column cards */
+.vevo-cards-section {
+  margin: 10px 0 50px;
+}
+.vevo-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+.vevo-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.vevo-card-body {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.vevo-card-body a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.vevo-card-body a:hover { color: var(--navy); }
+
+/* VEVO Buttons */
+.vevo-btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.vevo-btn {
+  display: block;
+  background: #1a6496;
+  color: white;
+  padding: 13px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s;
+}
+.vevo-btn:hover { background: #145380; text-decoration: none; color: white; }
+.vevo-btn .ext { font-size: 12px; opacity: 0.8; }
+
+/* Page feedback bar */
+.page-feedback {
+  background: #f5f5f5;
+  border-top: 1px solid var(--border);
+  padding: 14px 20px;
+}
+.page-feedback-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.feedback-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+.feedback-btn {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 5px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-family: inherit;
+  color: var(--blue);
+}
+.feedback-btn:hover { background: var(--light-blue); }
+.last-updated {
+  font-size: 13px;
+  color: var(--text-light);
+}
+.print-link {
+  font-size: 13px;
+  color: var(--blue);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .vevo-two-col { grid-template-columns: 1fr; }
+  .vevo-cards-grid { grid-template-columns: 1fr; }
+  .tab-nav-inner { overflow-x: auto; padding-bottom: 0; }
+  .vevo-hero-content h1 { font-size: 26px; }
+}
+
+
+/* ===== SPA PAGE SYSTEM ===== */
+.page { display: none; }
+.page.active { display: block; }
+#page-home { display: block; }
+
 </style>
 </head>
 <body>
@@ -1678,13 +1998,15 @@
   <div class="secondary-nav">
     <div class="secondary-nav-inner">
       <a href="#">ImmiAccount</a>
-      <a href="#">Visa Entitlement Verification Online (VEVO)</a>
+      <a href="#" onclick="showPage('vevo');return false;">Visa Entitlement Verification Online (VEVO)</a>
       <a href="#">My Tourist Refund Scheme (TRS)</a>
     </div>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
+<!-- ===== HOME PAGE ===== -->
+<div id="page-home" class="page active">
 <main id="main-content">
   <section class="hero" aria-label="Immigration and citizenship navigation">
     <div class="hero-inner">
@@ -1776,7 +2098,7 @@
           <span class="card-title">Our online forms and services</span>
           <span class="card-arrow">›</span>
         </div>
-        <p class="card-desc">Apply, notify us of changes, check status or withdraw an application. Use ImmiAccount or VEVO.</p>
+        <p class="card-desc">Apply, notify us of changes, check status or withdraw an application. Use ImmiAccount or <a href="vevo-page.html" style="color:var(--blue);text-decoration:underline;">VEVO</a>.</p>
       </a>
 
       <!-- Card 5 -->
@@ -1934,6 +2256,329 @@
     </div>
   </section>
 </main>
+</div>
+
+
+<!-- ===== VEVO PAGE ===== -->
+<div id="page-vevo" class="page">
+  <main id="vevo-main-content">
+    
+
+  <!-- ===== HERO BANNER ===== -->
+  <div class="vevo-hero">
+    <!-- Passport background image (CSS art) -->
+    <div class="vevo-hero-bg">
+      <div class="passport-visual">
+        <!-- Passport illustration -->
+        <svg viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;">
+          <!-- Dark background -->
+          <rect width="500" height="380" fill="#2c3e50"/>
+          <!-- Subtle grid pattern -->
+          <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+          </pattern>
+          <rect width="500" height="380" fill="url(#grid)"/>
+          
+          <!-- Hand holding passport (simplified) -->
+          <!-- Hand -->
+          <ellipse cx="260" cy="340" rx="80" ry="30" fill="#c8a882" opacity="0.9"/>
+          <rect x="200" y="280" width="120" height="80" rx="10" fill="#c8a882" opacity="0.9"/>
+          <!-- Fingers -->
+          <rect x="205" y="270" width="22" height="40" rx="11" fill="#c8a882" opacity="0.9"/>
+          <rect x="232" y="262" width="22" height="48" rx="11" fill="#c8a882" opacity="0.9"/>
+          <rect x="259" y="260" width="22" height="50" rx="11" fill="#c8a882" opacity="0.9"/>
+          <rect x="286" y="264" width="20" height="44" rx="10" fill="#c8a882" opacity="0.9"/>
+          
+          <!-- Passport book -->
+          <rect x="170" y="80" width="200" height="260" rx="6" fill="#1a3a6e"/>
+          <!-- Passport spine -->
+          <rect x="170" y="80" width="18" height="260" rx="3" fill="#152d56"/>
+          <!-- Passport cover detail -->
+          <rect x="180" y="90" width="180" height="240" rx="4" fill="#1e4080"/>
+          <!-- Crest area on passport -->
+          <circle cx="270" cy="190" r="40" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          <circle cx="270" cy="190" r="35" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+          <!-- Simplified crest symbol -->
+          <polygon points="270,162 273,172 283,172 275,178 278,188 270,182 262,188 265,178 257,172 267,172" fill="rgba(255,255,255,0.6)"/>
+          <!-- AUSTRALIA text -->
+          <text x="270" y="215" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="14" font-weight="bold" letter-spacing="3" font-family="Arial,sans-serif">AUSTRALIA</text>
+          <text x="270" y="232" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="9" letter-spacing="2" font-family="Arial,sans-serif">PASSPORT</text>
+          <!-- MRZ lines at bottom of passport -->
+          <rect x="185" y="295" width="170" height="6" rx="1" fill="rgba(255,255,255,0.12)"/>
+          <rect x="185" y="308" width="170" height="6" rx="1" fill="rgba(255,255,255,0.12)"/>
+          <!-- Embossed oval -->
+          <ellipse cx="270" cy="160" rx="50" ry="15" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+          
+          <!-- Background glow -->
+          <radialGradient id="bgGlow" cx="60%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#2980b9" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+          </radialGradient>
+          <rect width="500" height="380" fill="url(#bgGlow)"/>
+        </svg>
+      </div>
+    </div>
+    <div class="vevo-hero-overlay"></div>
+    <div class="vevo-hero-content">
+      <h1>Check visa details and conditions</h1>
+    </div>
+  </div>
+
+  <!-- ===== TAB NAVIGATION ===== -->
+  <div class="tab-nav" role="navigation" aria-label="Page sections">
+    <div class="tab-nav-inner">
+      <button class="tab-btn active" onclick="switchTab('overview', this)">Overview</button>
+      <button class="tab-btn" onclick="switchTab('check-online', this)">Check conditions online (VEVO)</button>
+      <button class="tab-btn" onclick="switchTab('see-conditions', this)">See visa conditions</button>
+      <button class="tab-btn" onclick="switchTab('conditions-list', this)">Conditions list</button>
+    </div>
+    
+  </div>
+
+  <!-- ===== TAB CONTENT ===== -->
+
+  <!-- OVERVIEW TAB -->
+  <div id="tab-overview" class="tab-content">
+    <!-- Alert Banner -->
+    <div class="vevo-alert">
+      <div class="vevo-alert-inner">
+        <span class="vevo-alert-icon">ℹ</span>
+        <div class="vevo-alert-text">
+          <strong>Temporary travel restrictions for Iranian Visitor visa holders.</strong>
+          For more information see <a href="#">Temporary travel restrictions for Visitor visa holders with Iranian passports ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="vevo-main">
+      <!-- Two column: text + laptop image -->
+      <div class="vevo-two-col">
+        <div class="vevo-text-col">
+          <p>Visa Entitlement Verification Online (VEVO) allows visa holders, employers, education providers and other organisations to check visa details and conditions.</p>
+          <p>VEVO tells you details relating to your current in-effect visa:</p>
+          <ul>
+            <li>which visa</li>
+            <li>the expiry date</li>
+            <li>the must not arrive after date</li>
+            <li>the period of stay (how long you can stay)</li>
+            <li>conditions (what you can and can't do).</li>
+          </ul>
+          <p>VEVO is not able to provide any details relating to visas that are not 'in effect'. For example, if you hold a Bridging visa, VEVO will not be able to show details of your substantive visa application.</p>
+        </div>
+        <div class="vevo-img-col">
+          <!-- Laptop/desk scene -->
+          <div class="desk-visual">
+            <svg viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+              <!-- Table surface -->
+              <rect width="500" height="280" fill="#f0ede8"/>
+              <!-- Wood grain subtle -->
+              <rect width="500" height="280" fill="none" stroke="#e8e4df" stroke-width="8"/>
+              
+              <!-- Laptop -->
+              <rect x="120" y="60" width="260" height="165" rx="8" fill="#d0cdc8"/>
+              <rect x="128" y="68" width="244" height="149" rx="4" fill="#1a1a2e"/>
+              <!-- Screen content -->
+              <rect x="135" y="75" width="230" height="135" rx="2" fill="#0f3460"/>
+              <rect x="145" y="85" width="120" height="10" rx="2" fill="rgba(255,255,255,0.6)"/>
+              <rect x="145" y="100" width="80" height="6" rx="2" fill="rgba(255,255,255,0.3)"/>
+              <rect x="145" y="112" width="100" height="6" rx="2" fill="rgba(255,255,255,0.3)"/>
+              <rect x="145" y="124" width="90" height="6" rx="2" fill="rgba(255,255,255,0.3)"/>
+              <rect x="270" y="85" width="85" height="120" rx="4" fill="rgba(255,255,255,0.1)"/>
+              <!-- Laptop base -->
+              <rect x="100" y="225" width="300" height="14" rx="4" fill="#b8b5b0"/>
+              <rect x="190" y="225" width="120" height="8" rx="2" fill="#a8a5a0"/>
+              
+              <!-- Plant -->
+              <rect x="390" y="160" width="40" height="50" rx="4" fill="#8B6914" opacity="0.7"/>
+              <ellipse cx="410" cy="160" rx="28" ry="20" fill="#2d6a2d"/>
+              <ellipse cx="395" cy="148" rx="18" ry="14" fill="#3a8a3a"/>
+              <ellipse cx="425" cy="145" rx="16" ry="13" fill="#2d6a2d"/>
+              
+              <!-- Pen -->
+              <rect x="60" y="150" width="70" height="8" rx="4" fill="#333" transform="rotate(-30, 95, 154)"/>
+              <polygon points="60,165 56,170 64,168" fill="#222" transform="rotate(-30, 95, 154)"/>
+              
+              <!-- Coffee mug -->
+              <ellipse cx="440" cy="235" rx="22" ry="12" fill="#555"/>
+              <rect x="418" y="215" width="44" height="28" rx="6" fill="#555"/>
+              <ellipse cx="440" cy="215" rx="22" ry="8" fill="#666"/>
+              <path d="M462,222 Q475,225 462,232" stroke="#555" stroke-width="4" fill="none"/>
+              
+              <!-- Shadow under laptop -->
+              <ellipse cx="250" cy="238" rx="130" ry="6" fill="rgba(0,0,0,0.08)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <hr class="vevo-divider">
+
+      <!-- Three column cards -->
+      <div class="vevo-cards-section">
+        <div class="vevo-cards-grid">
+          <!-- Card 1: Long term residents -->
+          <div class="vevo-card">
+            <h2 class="vevo-card-title">Long term residents</h2>
+            <div class="vevo-card-body">
+              <p>If you migrated to Australia before 1990 and have not travelled out of Australia you might not have an electronic record of your visa. You can request an electronic record of your permanent visa at <a href="#">Proof of permanent residence</a>. You can then use VEVO to prove you have a permanent visa.</p>
+              <br>
+              <a href="#">Check conditions online</a>
+            </div>
+          </div>
+
+          <!-- Card 2: List of conditions for a visa -->
+          <div class="vevo-card">
+            <h2 class="vevo-card-title">List of conditions for a visa</h2>
+            <div class="vevo-card-body">
+              <p>For each visa, find which conditions always apply, and which may apply depending on a range of criteria such as your country of origin.</p>
+              <br>
+              <a href="#">See visa conditions</a>
+            </div>
+          </div>
+
+          <!-- Card 3: VEVO buttons -->
+          <div class="vevo-card">
+            <h2 class="vevo-card-title">VEVO</h2>
+            <div class="vevo-btn-list">
+              <a href="#" class="vevo-btn">
+                Check your own visa details <span class="ext">↗</span>
+              </a>
+              <a href="#" class="vevo-btn">
+                Organisation account holder VEVO login <span class="ext">↗</span>
+              </a>
+              <a href="#" class="vevo-btn">
+                Register as a VEVO organisation <span class="ext">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECK CONDITIONS ONLINE TAB -->
+  <div id="tab-check-online" class="tab-content" style="display:none;">
+    <div class="vevo-main" style="padding-top:30px;padding-bottom:50px;">
+      <h2 style="font-size:26px;font-weight:700;margin-bottom:20px;">Check conditions online (VEVO)</h2>
+      <p style="font-size:15px;line-height:1.7;margin-bottom:16px;">Use VEVO to check your visa details and conditions online. VEVO is available 24 hours a day, 7 days a week.</p>
+      <p style="font-size:15px;line-height:1.7;margin-bottom:24px;">You will need your:</p>
+      <ul style="margin-left:20px;margin-bottom:24px;">
+        <li style="font-size:15px;line-height:1.8;">passport number</li>
+        <li style="font-size:15px;line-height:1.8;">date of birth</li>
+        <li style="font-size:15px;line-height:1.8;">country of passport</li>
+      </ul>
+      <div class="vevo-btn-list" style="max-width:400px;">
+        <a href="#" class="vevo-btn">Check your own visa details ↗</a>
+        <a href="#" class="vevo-btn">Organisation account holder VEVO login ↗</a>
+        <a href="#" class="vevo-btn">Register as a VEVO organisation ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEE VISA CONDITIONS TAB -->
+  <div id="tab-see-conditions" class="tab-content" style="display:none;">
+    <div class="vevo-main" style="padding-top:30px;padding-bottom:50px;">
+      <h2 style="font-size:26px;font-weight:700;margin-bottom:20px;">See visa conditions</h2>
+      <p style="font-size:15px;line-height:1.7;margin-bottom:16px;">Each visa has a set of conditions that tell you what you can and cannot do on that visa. Some conditions always apply to a visa, while others may only apply depending on criteria such as your country of origin.</p>
+      <p style="font-size:15px;line-height:1.7;margin-bottom:16px;">You can check your visa conditions by:</p>
+      <ul style="margin-left:20px;margin-bottom:24px;">
+        <li style="font-size:15px;line-height:1.8;">Using VEVO to check conditions that apply to your specific visa grant</li>
+        <li style="font-size:15px;line-height:1.8;">Looking at the conditions list for your visa type</li>
+      </ul>
+      <p style="font-size:15px;line-height:1.7;">If you breach a visa condition, you may have your visa cancelled. You should read and understand all conditions that apply to your visa.</p>
+    </div>
+  </div>
+
+  <!-- CONDITIONS LIST TAB -->
+  <div id="tab-conditions-list" class="tab-content" style="display:none;">
+    <div class="vevo-main" style="padding-top:30px;padding-bottom:50px;">
+      <h2 style="font-size:26px;font-weight:700;margin-bottom:20px;">Conditions list</h2>
+      <p style="font-size:15px;line-height:1.7;margin-bottom:24px;">Each condition is given a number. Find the condition that applies to your visa and what it means.</p>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead>
+          <tr style="background:var(--navy);color:white;">
+            <th style="padding:12px 16px;text-align:left;width:120px;">Condition</th>
+            <th style="padding:12px 16px;text-align:left;">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8101</td>
+            <td style="padding:12px 16px;">No work</td>
+          </tr>
+          <tr style="background:#f9f9f9;border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8102</td>
+            <td style="padding:12px 16px;">No work except as permitted by the Minister</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8104</td>
+            <td style="padding:12px 16px;">Must not work more than 40 hours per fortnight</td>
+          </tr>
+          <tr style="background:#f9f9f9;border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8105</td>
+            <td style="padding:12px 16px;">Must not work except in nominated occupation</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8107</td>
+            <td style="padding:12px 16px;">Must maintain enrolment</td>
+          </tr>
+          <tr style="background:#f9f9f9;border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8201</td>
+            <td style="padding:12px 16px;">Maximum 3 months study or training</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8202</td>
+            <td style="padding:12px 16px;">Must maintain enrolment and satisfactory attendance/academic performance</td>
+          </tr>
+          <tr style="background:#f9f9f9;border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8301</td>
+            <td style="padding:12px 16px;">No dependents to join holder in Australia</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8401</td>
+            <td style="padding:12px 16px;">Must depart Australia at end of authorised stay</td>
+          </tr>
+          <tr style="background:#f9f9f9;border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8501</td>
+            <td style="padding:12px 16px;">Must maintain adequate health insurance</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8503</td>
+            <td style="padding:12px 16px;">No further stay — holder must not be granted a substantive visa while in Australia</td>
+          </tr>
+          <tr style="background:#f9f9f9;border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8516</td>
+            <td style="padding:12px 16px;">Must maintain lawful status</td>
+          </tr>
+          <tr style="border-bottom:1px solid #ddd;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8517</td>
+            <td style="padding:12px 16px;">Family members must maintain lawful status</td>
+          </tr>
+          <tr style="background:#f9f9f9;">
+            <td style="padding:12px 16px;font-weight:600;color:var(--blue);">8558</td>
+            <td style="padding:12px 16px;">May engage in any work</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Page Feedback Bar -->
+  <div class="page-feedback">
+    <div class="page-feedback-inner">
+      <div class="feedback-left">
+        <span>Tell us what you think of this page</span>
+        <button class="feedback-btn" onclick="#">👍</button>
+        <button class="feedback-btn" onclick="#">👎</button>
+      </div>
+      <span class="last-updated">Last updated: 4 May 2026</span>
+      <span class="print-link" onclick="window.print()">Print this page 🖨</span>
+    </div>
+  </div>
+
+
+  </main>
+</div>
 
 <!-- ===== FOOTER NAVIGATION ===== -->
 <footer>
@@ -2678,6 +3323,34 @@
 </footer>
 
 <script>
+
+// ===== SPA PAGE NAVIGATION =====
+function showPage(pageId) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  // Show target page
+  var target = document.getElementById('page-' + pageId);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+}
+
+// Tab switching (VEVO page)
+function switchTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  var tab = document.getElementById('tab-' + tabId);
+  if (tab) tab.style.display = 'block';
+  btn.classList.add('active');
+}
+
+// Make logo click go to home
+document.querySelector('.logo-area') && document.querySelector('.logo-area').addEventListener('click', function(e){
+  e.preventDefault();
+  showPage('home');
+});
+
   // Mobile Nav
   function openNav() {
     document.getElementById('mobileNav').classList.add('open');
